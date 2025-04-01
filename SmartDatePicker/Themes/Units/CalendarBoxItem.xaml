@@ -1,0 +1,31 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:units="clr-namespace:SmartDatePicker.UI.Units">
+
+
+    <Style TargetType="{x:Type units:CalendarBoxItem}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="#666666"/>
+        <Setter Property="Width" Value="28"/>
+        <Setter Property="Height" Value="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=ActualWidth}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:CalendarBoxItem}">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="4" Margin="4">
+                        <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Content, StringFormat={}{0}}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsCurrentMonth" Value="True">
+                            <Setter Property="Foreground" Value="#FFFFFF"/>
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#FFFFFF"/>
+                            <Setter Property="Foreground" Value="#000000"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

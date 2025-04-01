@@ -1,0 +1,14 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/SmartDatePicker;component/Themes/Units/SmartData.xaml"/>
+        <ResourceDictionary Source="/SmartDatePicker;component/Themes/Units/CalendarSwitch.xaml"/>
+        <ResourceDictionary Source="/SmartDatePicker;component/Themes/Units/DayOfWeek.xaml"/>
+        <ResourceDictionary Source="/SmartDatePicker;component/Themes/Units/CalendarBox.xaml"/>
+        <ResourceDictionary Source="/SmartDatePicker;component/Themes/Units/CalendarBoxItem.xaml"/>
+        <ResourceDictionary Source="/SmartDatePicker;component/Themes/Units/ChevronButton.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
